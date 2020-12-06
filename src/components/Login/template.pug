@@ -1,11 +1,17 @@
-div
+b-row(align-v="center")
+    b-col
+    b-col
+        b-form(@submit="login")#log
 
-    label Login
-    b-form-input(v-model="login", placeholder= "Enter your login")
+            label.centerd.mt-4 Login
+            b-form-input(v-model="username" placeholder= "Enter your login").centerd
 
-    label Password
-    b-form-input(v-model="passw", placeholder= "Enter your password")
+            label.centerd.mt-4 Password
+            b-form-input(v-model="pwd" placeholder= "Enter your password").centerd
 
-    b-button Connect
+            b-button(type="submit").mt-4.centerbutton Connect
 
-    b-button Back to Menu
+        router-link(to="/")
+            b-button.centerbutton Back to Menu
+
+    b-col
