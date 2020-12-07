@@ -3,23 +3,25 @@ export default {
     name: 'Login',
     data: function() {
         return {
-            username: "",
-            pwd: ""
+            username:"",
+            password:""
         }
     },
     computed: {
 
     },
     methods: {
-        login(evt) {
-            evt.preventDefault()
-            console.log(this.username)
-            this.$axios.post("http://localhost:8081/login", {"username":this.username, "password":this.pwd})
-                .then((response)=>{
-                    console.log(response)
+        onLogin() {
+            this.$axios.post("http://localhost:8081/login", {"username":this.username, "password":this.password})
+            .then((response)=>{
+                console.log(response.data)
             }).catch((error)=>{
                 console.log(error)
             })
+        },
+        onReset() {
+            this.username = ""
+            this.password = ""
         }
     },
     mounted: function() {

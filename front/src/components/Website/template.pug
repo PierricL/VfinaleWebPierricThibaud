@@ -1,15 +1,8 @@
 b-container(fluid)#test
-
     .row
-        b-avatar(variant="dark" size = "8em", class = "col-md-1 ml-auto mr-auto")
-
+        b-avatar(variant="dark" size = "8em").col-md-1.ml-auto.mr-auto
     router-link(to="/login")
-        b-button login
-
-
-
-
-
-    router-link(to="/CreateAccount")
-       b-button New ? Create An Account
-    router-view
+        b-button(variant="primary") Login
+    router-link(to="/CreateAccount").ml-4
+       b-button(variant="primary") New ? Create An Account
+    router-view#content-viewer

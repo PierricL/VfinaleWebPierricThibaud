@@ -1,17 +1,11 @@
 b-row(align-v="center")
     b-col
     b-col
-        b-form(@submit="login")#log
-
-            label.centerd.mt-4 Login
-            b-form-input(v-model="username" placeholder= "Enter your login").centerd
-
-            label.centerd.mt-4 Password
-            b-form-input(v-model="pwd" placeholder= "Enter your password").centerd
-
-            b-button(type="submit").mt-4.centerbutton Connect
-
-        router-link(to="/")
-            b-button.centerbutton Back to Menu
-
+        b-form(@submit="onLogin" @reset="onReset")#log
+            b-form-group(label="Login" label-for="login-input")
+                b-form-input(id="login-input" placeholder="Enter your username" v-model="username" required)
+            b-form-group(label="Password" label-for="password-input")
+                b-form-input(id="password-input" type="password" placeholder="Please enter your password" v-model="password" required)
+            b-button(type="submit") Submit
+            b-button(variant="danger" type="reset") Reset
     b-col

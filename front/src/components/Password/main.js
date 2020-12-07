@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 export default {
-    name: 'Login',
+    name: 'Password',
     data: function() {
         return {
             test2: ""

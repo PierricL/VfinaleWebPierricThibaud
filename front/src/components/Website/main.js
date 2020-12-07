@@ -3,7 +3,7 @@ export default {
     name: 'Website',
     data: function() {
         return {
-            show: true
+            
         }
     },
     computed: {
