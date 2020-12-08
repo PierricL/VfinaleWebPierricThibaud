@@ -4,8 +4,13 @@ b-row(align-v="center")
         b-form(@submit="onLogin" @reset="onReset")#log
             b-form-group(label="Login" label-for="login-input")
                 b-form-input(id="login-input" placeholder="Enter your username" v-model="username" required)
+
             b-form-group(label="Password" label-for="password-input")
                 b-form-input(id="password-input" type="password" placeholder="Please enter your password" v-model="password" required)
+
             b-button(type="submit") Submit
             b-button(variant="danger" type="reset") Reset
+
+        router-link(to"/")
+            b-button.centerbutton Back to Menu
     b-col
